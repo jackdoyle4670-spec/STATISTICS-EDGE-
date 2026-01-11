@@ -3,96 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Greyhound Edge • Since 2026</title>
+<title>Greyhound Edge • Professional Stats Since 2026</title>
 
 <style>
-:root {
-  --bg:#0f1115;
-  --card:#1a1d24;
-  --accent:#4da3ff;
-  --text:#e6e6e6;
-  --muted:#9aa0aa;
-}
-
-* {
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  background: #0f1115;
+  color: #e6e6e6;
 }
-
 header {
   padding: 16px;
   background: #141824;
 }
-
 header h1 {
   margin: 0;
   font-size: 1.5rem;
 }
-
 header p {
   margin: 4px 0 0;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: #9aa0aa;
 }
-
-.search {
-  padding: 12px;
-}
-
-.search input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  background: var(--card);
-  color: var(--text);
-  font-size: 1rem;
-}
-
 .section {
   padding: 16px;
 }
-
 .section h2 {
-  color: var(--accent);
+  color: #4da3ff;
   margin-bottom: 10px;
 }
-
 .card {
-  background: var(--card);
-  border-radius: 12px;
+  background: #1a1d24;
+  border-radius: 10px;
   padding: 12px;
   margin-bottom: 12px;
 }
-
 .card h3 {
   margin: 0 0 6px;
   font-size: 1rem;
 }
-
-.card p {
-  margin: 0;
-  font-size: 0.85rem;
-  color: var(--muted);
+.meta {
+  font-size: 0.8rem;
+  color: #9aa0aa;
 }
-
-.empty {
-  color: var(--muted);
-  font-size: 0.9rem;
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 8px;
 }
-
+.stat {
+  background: #11141c;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+}
+.stat span {
+  display: block;
+  font-size: 0.7rem;
+  color: #9aa0aa;
+}
 footer {
   text-align: center;
   padding: 14px;
   font-size: 0.75rem;
-  color: var(--muted);
+  color: #9aa0aa;
 }
 </style>
 </head>
@@ -101,36 +76,93 @@ footer {
 
 <header>
   <h1>Greyhound Edge</h1>
-  <p>Professional greyhound statistics • Since 2026</p>
+  <p>Independent greyhound statistics • Since 2026</p>
 </header>
 
-<div class="search">
-  <input type="text" placeholder="Search (will work once data is added)">
+<div class="section">
+  <h2>Dogs (2026 Recorded Times)</h2>
+
+  <div class="card">
+    <h3>Rocket Rose</h3>
+    <div class="meta">Central Park • 277m • D1</div>
+    <div class="stats">
+      <div class="stat"><span>Best Time</span>16.46</div>
+      <div class="stat"><span>Date</span>02 Jan 2026</div>
+      <div class="stat"><span>Trap</span>2</div>
+      <div class="stat"><span>Run Style</span>Early</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Half Jarred</h3>
+    <div class="meta">Central Park • 491m • A1</div>
+    <div class="stats">
+      <div class="stat"><span>Best Time</span>29.01</div>
+      <div class="stat"><span>Date</span>02 Jan 2026</div>
+      <div class="stat"><span>Trap</span>1</div>
+      <div class="stat"><span>Run Style</span>Rails</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Sandwood Gabby</h3>
+    <div class="meta">Doncaster • 275m • D2</div>
+    <div class="stats">
+      <div class="stat"><span>Best Time</span>16.80</div>
+      <div class="stat"><span>Date</span>04 Jan 2026</div>
+      <div class="stat"><span>Trap</span>3</div>
+      <div class="stat"><span>Run Style</span>Middle</div>
+    </div>
+  </div>
 </div>
 
 <div class="section">
-  <h2>Dogs</h2>
-  <div class="card empty">No dog data loaded.</div>
+  <h2>Track Trap Bias (2026)</h2>
+
+  <div class="card">
+    <h3>Central Park</h3>
+    <div class="stats">
+      <div class="stat"><span>Trap 1</span>14.7%</div>
+      <div class="stat"><span>Trap 2</span>25.0%</div>
+      <div class="stat"><span>Trap 3</span>26.5%</div>
+      <div class="stat"><span>Trap 4</span>15.6%</div>
+      <div class="stat"><span>Trap 5</span>18.2%</div>
+      <div class="stat"><span>Trap 6</span>7.4%</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Doncaster</h3>
+    <div class="stats">
+      <div class="stat"><span>Trap 1</span>35.3%</div>
+      <div class="stat"><span>Trap 2</span>24.3%</div>
+      <div class="stat"><span>Trap 3</span>19.5%</div>
+      <div class="stat"><span>Trap 4</span>5.0%</div>
+      <div class="stat"><span>Trap 5</span>22.9%</div>
+      <div class="stat"><span>Trap 6</span>18.2%</div>
+    </div>
+  </div>
 </div>
 
 <div class="section">
-  <h2>Tracks</h2>
-  <div class="card empty">No track statistics loaded.</div>
-</div>
+  <h2>Trainers (2026 Strike Rates)</h2>
 
-<div class="section">
-  <h2>Trainers</h2>
-  <div class="card empty">No trainer statistics loaded.</div>
-</div>
+  <div class="card">
+    <h3>Phil Milner</h3>
+    <div class="meta">Doncaster</div>
+    <div class="stats">
+      <div class="stat"><span>Runs</span>287</div>
+      <div class="stat"><span>Wins</span>94</div>
+      <div class="stat"><span>Strike Rate</span>32.8%</div>
+      <div class="stat"><span>Strength</span>Sprints</div>
+    </div>
+  </div>
 
-<div class="section">
-  <h2>Major Events</h2>
-  <div class="card empty">No event data loaded.</div>
-</div>
-
-<footer>
-  Greyhound Edge • Independent statistics • Since 2026
-</footer>
-
-</body>
-</html>
+  <div class="card">
+    <h3>Paul Donovan</h3>
+    <div class="meta">Shelbourne Park</div>
+    <div class="stats">
+      <div class="stat"><span>Runs</span>412</div>
+      <div class="stat"><span>Wins</span>104</div>
+      <div class="stat"><span>Strike Rate</span>25.2%</div>
+      <div class
