@@ -7,11 +7,23 @@
 <title>Greyhound Edge • Since 2026</title>
 
 <style>
+:root {
+  --bg:#0f1115;
+  --card:#1a1d24;
+  --accent:#4da3ff;
+  --text:#e6e6e6;
+  --muted:#9aa0aa;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f1115;
-  color: #e6e6e6;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
@@ -27,7 +39,21 @@ header h1 {
 header p {
   margin: 4px 0 0;
   font-size: 0.9rem;
-  color: #9aa0aa;
+  color: var(--muted);
+}
+
+.search {
+  padding: 12px;
+}
+
+.search input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--card);
+  color: var(--text);
+  font-size: 1rem;
 }
 
 .section {
@@ -35,24 +61,38 @@ header p {
 }
 
 .section h2 {
-  color: #4da3ff;
-  margin-bottom: 8px;
+  color: var(--accent);
+  margin-bottom: 10px;
 }
 
-.box {
-  background: #1a1d24;
-  border-radius: 10px;
+.card {
+  background: var(--card);
+  border-radius: 12px;
   padding: 12px;
   margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.empty {
+  color: var(--muted);
   font-size: 0.9rem;
-  color: #9aa0aa;
 }
 
 footer {
   text-align: center;
   padding: 14px;
   font-size: 0.75rem;
-  color: #9aa0aa;
+  color: var(--muted);
 }
 </style>
 </head>
@@ -64,24 +104,28 @@ footer {
   <p>Professional greyhound statistics • Since 2026</p>
 </header>
 
+<div class="search">
+  <input type="text" placeholder="Search (will work once data is added)">
+</div>
+
 <div class="section">
   <h2>Dogs</h2>
-  <div class="box">No data loaded.</div>
+  <div class="card empty">No dog data loaded.</div>
 </div>
 
 <div class="section">
   <h2>Tracks</h2>
-  <div class="box">No data loaded.</div>
+  <div class="card empty">No track statistics loaded.</div>
 </div>
 
 <div class="section">
   <h2>Trainers</h2>
-  <div class="box">No data loaded.</div>
+  <div class="card empty">No trainer statistics loaded.</div>
 </div>
 
 <div class="section">
   <h2>Major Events</h2>
-  <div class="box">No data loaded.</div>
+  <div class="card empty">No event data loaded.</div>
 </div>
 
 <footer>
